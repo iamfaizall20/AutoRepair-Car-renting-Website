@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+body{
+    min-height: 100vh;
+}
+.navbar{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10rem;
+}
+.navbar h1{
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+}
+.navbar ul {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    list-style: none;
+    position: relative;
+}
+.navbar ul li a {
+    position: relative;
+    color: black;
+    opacity: 0.8;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.2s ease-in;
+}
+.navbar ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background: #FFB200;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
+}
+.navbar ul li a:hover {
+    opacity: 1;
+}
+.navbar ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin:left;
+}
+.hero-section{
+    height: calc(100vh - 60px);
+    background: linear-gradient(rgba(0, 0, 0, 0.550), rgba(0, 0, 0, 0.700)), url('https://static.vecteezy.com/system/resources/thumbnails/001/625/227/original/young-asian-auto-mechanic-examining-engine-at-car-hood-in-auto-repair-workshop-repairman-checking-for-customer-to-safety-maintenance-support-before-long-trip-business-and-transportation-concept-free-video.jpg') center / cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 12rem 30rem;
+}
+.hero-subtitle{
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: #FFB200;
+    font-weight: 450;
+    font-size: 1.2rem;
+}
+.hero-header{
+    font-size: 6rem;
+    letter-spacing: -1px;
+    margin: 3rem 0;
+    line-height: 110%;
+}
+.hero-button {
+    background: #cc9003;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 550;
+    border-radius: 2px;
+    padding: 8px 19px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+.hero-button:hover {
+    background: #b37e02;
+    transform: scale(1.05);
+}
+.services{
+    margin: 3rem;
+    padding: 2rem 6rem;
+    text-align: center;
+}
+.services .service-subtitle{
+    letter-spacing: 4px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: #FFB200;
+    font-weight: 550;
+}
+.services .service-title{
+    font-size: 2rem;
+    margin-bottom: 4rem;
+}
+.service-cards{
+    display: flex;
+    place-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+.service-cards .card{
+    height: 170px;
+    width: 400px;
+    display: flex;
+    cursor: pointer;
+    position: relative;
+}
+.card .card-left{
+    height: 60%;
+    width: 30%;
+}
+.card .card-right{
+    width: 70%;
+    text-align: start;
+    padding: 0.5rem;
+}
+.card .card-header{
+    font-weight: 650;
+    font-size: 1.1rem;
+}
+.card-right .card-para{
+    margin-top: 10px;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+.card-right a{
+    position: absolute;
+    bottom: 5px;
+    color: black;
+    font-size: 0.95rem;
+    border-bottom: 0.5px solid #cc9003;
+    text-decoration: none;
+}
+.aboutus{
+    margin: 2rem 0;
+    padding: 3rem 0;
+    background: #F8F9Fd;
+    display: flex;
+    place-content: center;
+}
+.about-us-container{
+    height: 550px;
+    width: 60%;
+    display: flex;
+}
+.about-us-container .image-prt{
+    width: 50%;
+    background-image: url('https://image.freepik.com/free-photo/mechanic-smiling-at-the-camera_13339-83418.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.about-us-container .content-prt{
+    width: 50%;
+    padding: 3rem;
+}
+.about-us-container .about-subtitle{
+    letter-spacing: 3px;
+    font-size: 0.89rem;
+    text-transform: uppercase;
+    color: #FFB200;
+    font-weight: 550;
+}
+.about-us-container .about-title{
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+.about-us-container .about-para{
+    margin: 2rem 0;
+    opacity: 0.7;
+}
+.about-us-container .about-button{
+    background-color: white;
+    border: none;
+    outline: none;
+    padding: 7px 35px;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+.about-us-container .middle-button{
+    margin: 0 0.2rem;
+}
+
+.footer {
+    position: relative;
+    background-color: #252525;
+    color: #fff;
+    padding: 5rem 18rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+.footer-col {
+    flex: 1;
+    margin: 10px;
+    max-width: 23%;
+    margin-bottom: 5rem;
+}
+.footer-header {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 4rem;
+    color: #f4f4f4;
+}
+.footer-para {
+    font-size: 14px;
+    color: #bbb;
+    line-height: 1.6;
+}
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+.footer-col ul li a {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 14px;
+}
+.footer-col ul li a:hover {
+    color: #fff;
+}
+.subheading {
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 10px;
+    color: #f4f4f4;
+}
+.para {
+    font-size: 14px;
+    color: #bbb;
+    line-height: 1.9;
+}
+.footer-col p span {
+    margin-right: 20px;
+    color: #f4f4f4;
+}
+.footer-col p i {
+    font-size: 18px;
+}
+.footer-strip{
+    position: absolute;
+    bottom: 3rem;
+}
+.footer-strip p{
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+@media screen and (max-width:1400px){
+    .hero-section{
+        padding: 4rem;
+    }
+    .services{
+        padding: 1rem 3rem;
+    }
+    .about-us-container{
+        height: 500px;
+        width: 85%;
+    }
+    .about-us-container .content-prt{
+        padding: 1rem 3rem;
+    }
+    .footer{
+        padding: 5rem;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .navbar{
+        padding: 0 2rem;
+    }
+    .navbar ul{
+        display: none;
+    }
+    .hero-section{
+        height: calc(65vh - 60px);
+    }
+    .services{
+        padding: 2rem 0;
+    }
+    .service-cards{
+        gap: 3rem;
+    }
+    .service-cards .card{
+        width: 350px;
+        height: 190px;
+    }
+    .about-us-container{
+        width: 90%;
+        height: 570px;
+    }
+    .about-us-container .about-title{
+        font-size: 1.6rem;
+    }
+    .about-us-container .about-subtitle{
+        font-size: 0.8rem;
+    }
+    .about-us-container .about-para{
+        font-size: 0.9rem;
+        letter-spacing: 0.5px;
+    }
+    .about-us-container .about-button{
+        margin-bottom: 15px;
+    }
+    .about-us-container .middle-button{
+        display: none;
+    }
+    .footer{
+        padding: 2rem 5rem 7rem;
+        justify-content: space-around;
+    }
+    .footer-col{
+        margin: 10px 5px;
+        max-width: 20%;
+    }
+}
+@media (max-width: 480px) {
+    .navbar{
+        padding: 0 1rem;
+    }
+    .navbar ul{
+        display: none;
+    }
+    .hero-section{
+        height: calc(80vh - 60px);
+        padding: 2rem 1rem;
+    }
+    .hero-subtitle{
+        font-size: 1rem;
+        letter-spacing: 5px;
+    }
+    .hero-header{
+        font-size: 4rem;
+    }
+    .services{
+        padding: 0 1rem;
+        margin: 3rem 0;
+    }
+    .about-us-container{
+        height: 650px;
+        flex-direction: column;
+    }
+    .about-button{
+        display: none;
+    }
+    .about-us-container .image-prt{
+        height: 35%;
+        width: 100%;
+    }
+    .about-us-container .content-prt{
+        padding: 1rem 0;
+        height: 65%;
+        width: 100%;
+    }
+    .about-us-container .about-subtitle{
+        font-size: 0.8rem;
+    }
+    .about-us-container .about-title{
+        font-size: 1.3rem;
+    }
+    .about-us-container .about-para{
+        font-size: 0.95rem;
+        margin: 1rem 0;
+    }
+    .footer{
+        padding: 2rem 0 5rem;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .footer-col{
+        padding: 0 1rem;
+        max-width: 100%;
+        margin: 0.3rem 0 1rem;
+    }
+    .footer-col p span{
+        margin-right: 5px;
+    }
+    .footer-header{
+        margin-bottom: 0.9rem;
+    }
+    .footer-strip {
+        bottom: 1rem;
+        border-top: 0.2px 
+        solid blanchedalmond;
+        padding: 0 1rem;
+    }
+    .footer-strip p{
+        padding-top: 15px;
+    }
+}
